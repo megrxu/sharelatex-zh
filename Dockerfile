@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Uncomment to change the `sources.list`
 # RUN sed -i 's/archive.ubuntu.com/mirrors.zju.edu.cn/g' /etc/apt/sources.list
 RUN apt update
-RUN apt install -y texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-science texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra
+RUN apt install -y texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-science texlive-latex-recommended texlive-fonts-recommended texlive-fonts-extra texlive-bibtex-extra biber
 
 # Some other Chinese fonts && rebuild the font cache
 RUN mkdir -p ~/.local/share/fonts
